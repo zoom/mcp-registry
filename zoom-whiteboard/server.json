@@ -1,0 +1,48 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.zoom/zoom-whiteboard",
+  "title": "Zoom Whiteboard MCP Server",
+  "description": "Zoom Whiteboard server for creating boards and diagrams and locating existing boards.",
+  "websiteUrl": "https://developers.zoom.us/docs/mcp/zoom-whiteboard-mcp-server/",
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "documentation": "https://developers.zoom.us/docs/mcp/servers/connect-to-zoom-mcp-servers/",
+      "publisher": "Zoom",
+      "keywords": [
+        "zoom",
+        "whiteboard",
+        "diagrams",
+        "visual-collaboration",
+        "planning",
+        "brainstorming",
+        "workshops",
+        "mcp"
+      ],
+      "examples": [
+        {
+          "name": "Create a whiteboard",
+          "description": "Generate a new editable Zoom Whiteboard from a prompt."
+        },
+        {
+          "name": "Create diagrams",
+          "description": "Generate flowcharts, planning boards, and technical diagrams."
+        },
+        {
+          "name": "Find existing boards",
+          "description": "Locate whiteboards available to the authenticated user."
+        }
+      ]
+    }
+  },
+  "repository": {
+    "url": "https://github.com/zoom/zoom-mcp-registry",
+    "source": "github"
+  },
+  "version": "1.0.1",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/whiteboard/streamable"
+    }
+  ]
+}

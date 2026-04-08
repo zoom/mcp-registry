@@ -1,0 +1,48 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.zoom/zoom-workspace",
+  "title": "Zoom Workspace MCP Server",
+  "description": "Zoom workspace server for meetings, chat, docs, recordings, and AI-generated collaboration content.",
+  "websiteUrl": "https://developers.zoom.us/docs/mcp/zoom/",
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "documentation": "https://developers.zoom.us/docs/mcp/servers/connect-to-zoom-mcp-servers/",
+      "publisher": "Zoom",
+      "keywords": [
+        "zoom",
+        "meetings",
+        "chat",
+        "docs",
+        "recordings",
+        "transcripts",
+        "collaboration",
+        "mcp"
+      ],
+      "examples": [
+        {
+          "name": "Search meeting content",
+          "description": "Search meetings, chat, and docs to find summaries, transcripts, recordings, and related content."
+        },
+        {
+          "name": "Review recording resources",
+          "description": "Retrieve recording summaries, next steps, playback links, and related meeting assets."
+        },
+        {
+          "name": "Create follow-up docs",
+          "description": "Generate a new Zoom Doc from Markdown based on meeting notes or action items."
+        }
+      ]
+    }
+  },
+  "repository": {
+    "url": "https://github.com/zoom/zoom-mcp-registry",
+    "source": "github"
+  },
+  "version": "1.0.1",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/zoom/streamable"
+    }
+  ]
+}

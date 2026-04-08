@@ -1,0 +1,48 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "name": "io.github.zoom/zoom-docs",
+  "title": "Zoom Docs MCP Server",
+  "description": "Zoom Docs server for creating and retrieving Zoom documents and notes in Markdown.",
+  "websiteUrl": "https://developers.zoom.us/docs/mcp/zoom-docs-mcp-server/",
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "documentation": "https://developers.zoom.us/docs/mcp/servers/connect-to-zoom-mcp-servers/",
+      "publisher": "Zoom",
+      "keywords": [
+        "zoom",
+        "docs",
+        "notes",
+        "markdown",
+        "documents",
+        "content",
+        "productivity",
+        "mcp"
+      ],
+      "examples": [
+        {
+          "name": "Create a Zoom Doc",
+          "description": "Create a new Zoom Doc from Markdown content."
+        },
+        {
+          "name": "Retrieve document content",
+          "description": "Load an existing Zoom Doc or note and return its Markdown content."
+        },
+        {
+          "name": "Read back notes",
+          "description": "Open existing notes for summarization, follow-up generation, or downstream workflows."
+        }
+      ]
+    }
+  },
+  "repository": {
+    "url": "https://github.com/zoom/zoom-mcp-registry",
+    "source": "github"
+  },
+  "version": "1.0.1",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/docs/streamable"
+    }
+  ]
+}
