@@ -1,6 +1,6 @@
-# MCP Registry Metadata
+# MCP Registry
 
-This repository is intended for the official MCP Registry service at `registry.modelcontextprotocol.io`. It contains the published registry metadata for three remote MCP servers under the `io.github.zoom/*` namespace. It does not contain the server implementations themselves.
+This project provides Zoom's registry of MCP servers at `registry.modelcontextprotocol.io`. It contains the published registry metadata for remote MCP servers. It does not contain the server implementations themselves.
 
 ## Published Servers
 
