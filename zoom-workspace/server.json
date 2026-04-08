@@ -3,6 +3,15 @@
   "name": "io.github.zoom/zoom-workspace",
   "title": "Zoom Workspace MCP Server",
   "description": "Zoom workspace server for meetings, chat, docs, recordings, and AI-generated collaboration content.",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/zoom/zoom-mcp-registry/main/zoom.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
   "websiteUrl": "https://developers.zoom.us/docs/mcp/zoom/",
   "_meta": {
     "io.modelcontextprotocol.registry/publisher-provided": {

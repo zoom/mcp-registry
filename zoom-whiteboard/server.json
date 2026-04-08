@@ -3,6 +3,15 @@
   "name": "io.github.zoom/zoom-whiteboard",
   "title": "Zoom Whiteboard MCP Server",
   "description": "Zoom Whiteboard server for creating boards and diagrams and locating existing boards.",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/zoom/zoom-mcp-registry/main/zoom.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
   "websiteUrl": "https://developers.zoom.us/docs/mcp/zoom-whiteboard-mcp-server/",
   "_meta": {
     "io.modelcontextprotocol.registry/publisher-provided": {

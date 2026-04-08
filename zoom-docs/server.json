@@ -3,6 +3,15 @@
   "name": "io.github.zoom/zoom-docs",
   "title": "Zoom Docs MCP Server",
   "description": "Zoom Docs server for creating and retrieving Zoom documents and notes in Markdown.",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/zoom/zoom-mcp-registry/main/zoom.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
   "websiteUrl": "https://developers.zoom.us/docs/mcp/zoom-docs-mcp-server/",
   "_meta": {
     "io.modelcontextprotocol.registry/publisher-provided": {
