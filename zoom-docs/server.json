@@ -1,5 +1,5 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.zoom/zoom-docs",
   "title": "Zoom Docs MCP Server",
   "description": "Zoom Docs server for creating and retrieving Zoom documents and notes in Markdown.",

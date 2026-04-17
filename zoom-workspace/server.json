@@ -1,5 +1,5 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.zoom/zoom-workspace",
   "title": "Zoom Workspace MCP Server",
   "description": "Zoom workspace server for meetings, chat, docs, recordings, and AI-generated collaboration content.",

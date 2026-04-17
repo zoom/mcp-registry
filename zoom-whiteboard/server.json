@@ -1,5 +1,5 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.schema.json",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.zoom/zoom-whiteboard",
   "title": "Zoom Whiteboard MCP Server",
   "description": "Zoom Whiteboard server for creating boards and diagrams and locating existing boards.",

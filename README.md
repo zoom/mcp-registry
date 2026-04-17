@@ -29,18 +29,20 @@ Zoom Whiteboard provides MCP tools for creating new editable whiteboards and dia
 
 - Namespace: `io.github.zoom/*`
 - Transport: `streamable-http`
-- Current published version: `1.0.0`
+- Current metadata version in this repository: `1.0.1` for all three published entries
 
 ## Published Registry API Records
 
-- Search listing: `https://registry.modelcontextprotocol.io/v0/servers?search=zoom&limit=100`
-- Workspace latest version: `https://registry.modelcontextprotocol.io/v0/servers/io.github.zoom%2Fzoom-workspace/versions/latest`
-- Docs latest version: `https://registry.modelcontextprotocol.io/v0/servers/io.github.zoom%2Fzoom-docs/versions/latest`
-- Whiteboard latest version: `https://registry.modelcontextprotocol.io/v0/servers/io.github.zoom%2Fzoom-whiteboard/versions/latest`
+- Search listing: `https://registry.modelcontextprotocol.io/v0.1/servers?search=zoom&limit=100`
+- Workspace latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-workspace/versions/latest`
+- Docs latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-docs/versions/latest`
+- Whiteboard latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-whiteboard/versions/latest`
 
 ## Publishing Workflow
 
 The MCP Registry entries in this repository are published with `mcp-publisher`.
+
+For the Zoom-specific step-by-step publishing history and lessons learned, see [RUNBOOK.md](./RUNBOOK.md).
 
 ### Prerequisites
 
@@ -56,7 +58,7 @@ The MCP Registry entries in this repository are published with `mcp-publisher`.
 4. Refresh or establish a login session if needed:
 
    ```bash
-   mcp-publisher login
+   mcp-publisher login github
    ```
 
 5. Publish the entry:
