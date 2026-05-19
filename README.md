@@ -25,11 +25,25 @@ Zoom Docs provides a focused MCP surface for working with Zoom documents and not
 
 Zoom Whiteboard provides MCP tools for creating new editable whiteboards and diagrams from prompts and for locating existing boards in a user's account. It is intended for workshop planning, visual collaboration, and diagram-generation use cases, including simple flowcharts and more technical diagram types. The server only exposes boards the authenticated user can access.
 
+### `io.github.zoom/zoom-revenue-accelerator`
+
+- Registry metadata: [zoom-revenue-accelerator/server.json](./zoom-revenue-accelerator/server.json)
+- Remote URL: `https://mcp.zoom.us/mcp/revenue_accelerator/streamable`
+
+Zoom Revenue Accelerator provides a focused MCP surface for sales insights, conversations, and deal intelligence. It is intended for workflows such as reviewing customer interactions, preparing follow-up notes, and finding context from revenue-related conversations and activity.
+
+### `io.github.zoom/zoom-team-chat`
+
+- Registry metadata: [zoom-team-chat/server.json](./zoom-team-chat/server.json)
+- Remote URL: `https://mcp.zoom.us/mcp/team_chat/streamable`
+
+Zoom Team Chat provides a focused MCP surface for chat channels, messages, contacts, and collaboration context. It is intended for workflows such as locating chat history, preparing summaries, and generating follow-ups from Team Chat activity.
+
 ## Registry Notes
 
 - Namespace: `io.github.zoom/*`
 - Transport: `streamable-http`
-- Current metadata version in this repository: `1.0.1` for all three published entries
+- Current metadata versions in this repository: `1.0.2` for Workspace, Docs, and Whiteboard; `1.0.0` for Revenue Accelerator and Team Chat
 
 ## Published Registry API Records
 
@@ -37,6 +51,8 @@ Zoom Whiteboard provides MCP tools for creating new editable whiteboards and dia
 - Workspace latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-workspace/versions/latest`
 - Docs latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-docs/versions/latest`
 - Whiteboard latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-whiteboard/versions/latest`
+- Revenue Accelerator latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-revenue-accelerator/versions/latest`
+- Team Chat latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-team-chat/versions/latest`
 
 ## Publishing Workflow
 
@@ -73,6 +89,16 @@ Example:
 
 ```bash
 cd zoom-workspace
+mcp-publisher publish
+```
+
+To publish the two newer entries:
+
+```bash
+cd ~/temp/mcp-registry-publish/zoom-revenue-accelerator
+mcp-publisher publish
+
+cd ~/temp/mcp-registry-publish/zoom-team-chat
 mcp-publisher publish
 ```
 

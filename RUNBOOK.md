@@ -118,6 +118,25 @@ mcp-publisher publish
     Initial registry publish was `1.0.0`.
     Metadata changes were prepared under `1.0.1`.
 
+## Additional Servers Added Later
+
+Two additional remote MCP server entries were added after the first three entries:
+
+- `io.github.zoom/zoom-revenue-accelerator`
+- `io.github.zoom/zoom-team-chat`
+
+The existing Workspace, Docs, and Whiteboard entries were bumped to `1.0.2` because their checked-in metadata had changed after `1.0.1` was published. The new Revenue Accelerator and Team Chat entries start at `1.0.0` because they have no prior published registry version.
+
+Publish the new entries from their own folders:
+
+```bash
+cd ~/temp/mcp-registry-publish/zoom-revenue-accelerator
+mcp-publisher publish
+
+cd ~/temp/mcp-registry-publish/zoom-team-chat
+mcp-publisher publish
+```
+
 ## Final `server.json` Shape
 
 For each server, the final metadata included:

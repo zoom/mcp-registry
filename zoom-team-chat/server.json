@@ -1,0 +1,57 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.zoom/zoom-team-chat",
+  "title": "Zoom Team Chat MCP Server",
+  "description": "Zoom Team Chat server for channels, messages, contacts, and chat collaboration.",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/zoom/mcp-registry/main/zoom.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "websiteUrl": "https://developers.zoom.us/docs/chat/",
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "documentation": "https://developers.zoom.us/docs/mcp/servers/connect-to-zoom-mcp-servers/",
+      "publisher": "Zoom",
+      "keywords": [
+        "zoom",
+        "team-chat",
+        "chat",
+        "channels",
+        "messages",
+        "contacts",
+        "collaboration",
+        "mcp"
+      ],
+      "examples": [
+        {
+          "name": "Find chat context",
+          "description": "Search Team Chat messages, channels, and contacts available to the user."
+        },
+        {
+          "name": "Review channel activity",
+          "description": "Retrieve Team Chat channel and message context for summaries or follow-up."
+        },
+        {
+          "name": "Prepare chat follow-ups",
+          "description": "Use Team Chat context to draft notes, recaps, and collaboration updates."
+        }
+      ]
+    }
+  },
+  "repository": {
+    "url": "https://github.com/zoom/mcp-registry",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/team_chat/streamable"
+    }
+  ]
+}
