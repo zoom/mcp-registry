@@ -2,7 +2,7 @@
 
 This project provides Zoom's registry of MCP servers at `registry.modelcontextprotocol.io`. It contains the published registry metadata for remote MCP servers. It does not contain the server implementations themselves.
 
-## Published Servers
+## Registry Servers
 
 ### `io.github.zoom/zoom-workspace`
 
@@ -39,13 +39,27 @@ Zoom Revenue Accelerator provides a focused MCP surface for sales insights, conv
 
 Zoom Team Chat provides a focused MCP surface for chat channels, messages, contacts, and collaboration context. It is intended for workflows such as locating chat history, preparing summaries, and generating follow-ups from Team Chat activity.
 
+### `io.github.zoom/zoom-meetings`
+
+- Registry metadata: [zoom-meetings/server.json](./zoom-meetings/server.json)
+- Remote URL: `https://mcp.zoom.us/mcp/meeting/streamable`
+
+Zoom Meetings provides a focused MCP surface for meeting search, recordings, transcripts, summaries, and meeting assets. It is intended for workflows such as locating meeting context, reviewing recordings, and preparing follow-ups from meeting content.
+
+### `io.github.zoom/zoom-tasks`
+
+- Registry metadata: [zoom-tasks/server.json](./zoom-tasks/server.json)
+- Remote URL: `https://mcp.zoom.us/mcp/tasks/streamable`
+
+Zoom Tasks provides a focused MCP surface for creating, updating, assigning, and synchronizing tasks. It is intended for workflows such as managing task details, reviewing comments and steps, and coordinating work across collaborators.
+
 ## Registry Notes
 
 - Namespace: `io.github.zoom/*`
 - Transport: `streamable-http`
-- Current metadata versions in this repository: `1.0.2` for Workspace, Docs, and Whiteboard; `1.0.0` for Revenue Accelerator and Team Chat
+- Current metadata versions in this repository: `1.0.2` for Workspace, Docs, and Whiteboard; `1.0.0` for Revenue Accelerator, Team Chat, Meetings, and Tasks
 
-## Published Registry API Records
+## Registry API Records
 
 - Search listing: `https://registry.modelcontextprotocol.io/v0.1/servers?search=zoom&limit=100`
 - Workspace latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-workspace/versions/latest`
@@ -53,6 +67,8 @@ Zoom Team Chat provides a focused MCP surface for chat channels, messages, conta
 - Whiteboard latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-whiteboard/versions/latest`
 - Revenue Accelerator latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-revenue-accelerator/versions/latest`
 - Team Chat latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-team-chat/versions/latest`
+- Meetings latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-meetings/versions/latest`
+- Tasks latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-tasks/versions/latest`
 
 ## Publishing Workflow
 
@@ -99,6 +115,16 @@ cd ~/temp/mcp-registry-publish/zoom-revenue-accelerator
 mcp-publisher publish
 
 cd ~/temp/mcp-registry-publish/zoom-team-chat
+mcp-publisher publish
+```
+
+To publish the Meetings and Tasks entries:
+
+```bash
+cd ~/temp/mcp-registry-publish/zoom-meetings
+mcp-publisher publish
+
+cd ~/temp/mcp-registry-publish/zoom-tasks
 mcp-publisher publish
 ```
 

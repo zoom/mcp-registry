@@ -137,6 +137,25 @@ cd ~/temp/mcp-registry-publish/zoom-team-chat
 mcp-publisher publish
 ```
 
+## Meetings And Tasks Added Later
+
+Two more remote MCP server entries were added after the first five entries:
+
+- `io.github.zoom/zoom-meetings`
+- `io.github.zoom/zoom-tasks`
+
+The Meetings and Tasks entries start at `1.0.0` because they have no prior published registry version.
+
+Publish the new entries from their own folders:
+
+```bash
+cd ~/temp/mcp-registry-publish/zoom-meetings
+mcp-publisher publish
+
+cd ~/temp/mcp-registry-publish/zoom-tasks
+mcp-publisher publish
+```
+
 ## Final `server.json` Shape
 
 For each server, the final metadata included:

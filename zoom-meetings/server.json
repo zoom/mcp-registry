@@ -1,0 +1,57 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.zoom/zoom-meetings",
+  "title": "Zoom Meetings MCP Server",
+  "description": "Zoom Meetings server for meeting search, recordings, transcripts, summaries, and meeting assets.",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/zoom/mcp-registry/main/zoom.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "websiteUrl": "https://developers.zoom.us/docs/mcp/zoom-meetings-mcp-server/",
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "documentation": "https://developers.zoom.us/docs/mcp/servers/connect-to-zoom-mcp-servers/",
+      "publisher": "Zoom",
+      "keywords": [
+        "zoom",
+        "meetings",
+        "recordings",
+        "transcripts",
+        "summaries",
+        "participants",
+        "assets",
+        "mcp"
+      ],
+      "examples": [
+        {
+          "name": "Search meetings",
+          "description": "Find meetings by keyword and date range with meeting details and context."
+        },
+        {
+          "name": "Review meeting assets",
+          "description": "Retrieve meeting summaries, transcripts, recordings, and related assets."
+        },
+        {
+          "name": "Inspect recordings",
+          "description": "List cloud recordings and retrieve recording resources for follow-up workflows."
+        }
+      ]
+    }
+  },
+  "repository": {
+    "url": "https://github.com/zoom/mcp-registry",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/meeting/streamable"
+    }
+  ]
+}
