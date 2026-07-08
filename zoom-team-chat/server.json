@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.zoom/zoom-team-chat",
-  "title": "Zoom Team Chat MCP Server",
-  "description": "Zoom Team Chat server for channels, messages, contacts, and chat collaboration.",
+  "title": "Zoom Chat MCP Server",
+  "description": "Zoom Chat server for channels, messages, contacts, files, and chat collaboration.",
   "icons": [
     {
       "src": "https://raw.githubusercontent.com/zoom/mcp-registry/main/zoom.png",
@@ -12,33 +12,33 @@
       ]
     }
   ],
-  "websiteUrl": "https://developers.zoom.us/docs/chat/",
+  "websiteUrl": "https://developers.zoom.us/docs/mcp/zoom-chat-mcp-server/",
   "_meta": {
     "io.modelcontextprotocol.registry/publisher-provided": {
       "documentation": "https://developers.zoom.us/docs/mcp/servers/connect-to-zoom-mcp-servers/",
       "publisher": "Zoom",
       "keywords": [
         "zoom",
-        "team-chat",
         "chat",
         "channels",
         "messages",
         "contacts",
+        "files",
         "collaboration",
         "mcp"
       ],
       "examples": [
         {
           "name": "Find chat context",
-          "description": "Search Team Chat messages, channels, and contacts available to the user."
+          "description": "Search Zoom Chat messages, channels, contacts, files, and recent sessions."
         },
         {
           "name": "Review channel activity",
-          "description": "Retrieve Team Chat channel and message context for summaries or follow-up."
+          "description": "Retrieve channel and message context for summaries or follow-up workflows."
         },
         {
           "name": "Prepare chat follow-ups",
-          "description": "Use Team Chat context to draft notes, recaps, and collaboration updates."
+          "description": "Use Zoom Chat context to draft notes, recaps, and collaboration updates."
         }
       ]
     }
@@ -47,11 +47,11 @@
     "url": "https://github.com/zoom/mcp-registry",
     "source": "github"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://mcp.zoom.us/mcp/team_chat/streamable"
+      "url": "https://mcp.zoom.us/mcp/chat/streamable"
     }
   ]
 }

@@ -35,9 +35,9 @@ Zoom Revenue Accelerator provides a focused MCP surface for sales insights, conv
 ### `io.github.zoom/zoom-team-chat`
 
 - Registry metadata: [zoom-team-chat/server.json](./zoom-team-chat/server.json)
-- Remote URL: `https://mcp.zoom.us/mcp/team_chat/streamable`
+- Remote URL: `https://mcp.zoom.us/mcp/chat/streamable`
 
-Zoom Team Chat provides a focused MCP surface for chat channels, messages, contacts, and collaboration context. It is intended for workflows such as locating chat history, preparing summaries, and generating follow-ups from Team Chat activity.
+Zoom Chat provides a focused MCP surface for chat channels, messages, contacts, files, and collaboration context. It is intended for workflows such as locating chat history, preparing summaries, and generating follow-ups from chat activity. The registry name remains `io.github.zoom/zoom-team-chat` for continuity with the existing published entry.
 
 ### `io.github.zoom/zoom-meetings`
 
@@ -57,7 +57,7 @@ Zoom Tasks provides a focused MCP surface for creating, updating, assigning, and
 
 - Namespace: `io.github.zoom/*`
 - Transport: `streamable-http`
-- Current metadata versions in this repository: `1.0.2` for Workspace, Docs, and Whiteboard; `1.0.0` for Revenue Accelerator, Team Chat, Meetings, and Tasks
+- Current metadata versions in this repository: `1.0.2` for Workspace, Docs, and Whiteboard; `1.0.1` for Revenue Accelerator and Team Chat; `1.0.0` for Meetings and Tasks
 
 ## Registry API Records
 

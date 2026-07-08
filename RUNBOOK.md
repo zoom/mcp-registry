@@ -127,6 +127,8 @@ Two additional remote MCP server entries were added after the first three entrie
 
 The existing Workspace, Docs, and Whiteboard entries were bumped to `1.0.2` because their checked-in metadata had changed after `1.0.1` was published. The new Revenue Accelerator and Team Chat entries start at `1.0.0` because they have no prior published registry version.
 
+Revenue Accelerator and Team Chat were later bumped to `1.0.1` after Zoom published product MCP detail pages and the chat server documentation moved to the `Zoom Chat MCP Server` surface at `https://mcp.zoom.us/mcp/chat/streamable`. The registry name remains `io.github.zoom/zoom-team-chat` for continuity with the existing published entry.
+
 Publish the new entries from their own folders:
 
 ```bash

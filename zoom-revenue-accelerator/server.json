@@ -12,7 +12,7 @@
       ]
     }
   ],
-  "websiteUrl": "https://developers.zoom.us/docs/api/iq/",
+  "websiteUrl": "https://developers.zoom.us/docs/mcp/zoom-revenue-accelerator-mcp-server/",
   "_meta": {
     "io.modelcontextprotocol.registry/publisher-provided": {
       "documentation": "https://developers.zoom.us/docs/mcp/servers/connect-to-zoom-mcp-servers/",
@@ -24,7 +24,8 @@
         "conversations",
         "deals",
         "insights",
-        "analytics",
+        "crm",
+        "coaching",
         "mcp"
       ],
       "examples": [
@@ -47,7 +48,7 @@
     "url": "https://github.com/zoom/mcp-registry",
     "source": "github"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "remotes": [
     {
       "type": "streamable-http",
