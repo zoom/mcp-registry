@@ -1,0 +1,57 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.zoom/zoom-workflows",
+  "title": "Zoom Workflows MCP Server",
+  "description": "Zoom Workflows server for deploying, running, and monitoring Workflow Builder automations.",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/zoom/mcp-registry/main/zoom.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "websiteUrl": "https://developers.zoom.us/docs/mcp/zoom-workflows-mcp-server/",
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "documentation": "https://developers.zoom.us/docs/mcp/servers/connect-to-zoom-mcp-servers/",
+      "publisher": "Zoom",
+      "keywords": [
+        "zoom",
+        "workflows",
+        "workflow-builder",
+        "automation",
+        "agentic",
+        "deployments",
+        "executions",
+        "mcp"
+      ],
+      "examples": [
+        {
+          "name": "List workflows",
+          "description": "List user-owned workflows and retrieve saved workflow definitions."
+        },
+        {
+          "name": "Deploy a workflow",
+          "description": "Describe node contracts, then deploy or undeploy an agentic workflow."
+        },
+        {
+          "name": "Monitor executions",
+          "description": "Run a workflow asynchronously, check execution status, and resume paused runs."
+        }
+      ]
+    }
+  },
+  "repository": {
+    "url": "https://github.com/zoom/mcp-registry",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/workflow/streamable"
+    }
+  ]
+}

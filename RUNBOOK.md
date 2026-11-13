@@ -158,6 +158,56 @@ cd ~/temp/mcp-registry-publish/zoom-tasks
 mcp-publisher publish
 ```
 
+## Admin, Canvas, Phone, Productivity, Rooms, Workflows, And Workspaces Added Later
+
+Seven more remote MCP server entries were added after the first seven. They come from the Zoom MCP docs index at `https://developers.zoom.us/docs/mcp/servers/`:
+
+- `io.github.zoom/zoom-admin` -> `https://mcp.zoom.us/mcp/admin/streamable`
+- `io.github.zoom/zoom-canvas` -> `https://mcp.zoom.us/mcp/canvas/streamable`
+- `io.github.zoom/zoom-phone` -> `https://mcp.zoom.us/mcp/phone/streamable`
+- `io.github.zoom/zoom-productivity` -> `https://mcp.zoom.us/mcp/productivity/streamable`
+- `io.github.zoom/zoom-rooms` -> `https://mcp.zoom.us/mcp/rooms/streamable`
+- `io.github.zoom/zoom-workflows` -> `https://mcp.zoom.us/mcp/workflow/streamable`
+- `io.github.zoom/zoom-workspaces` -> `https://mcp.zoom.us/mcp/workspace/streamable`
+
+They start at `1.0.0`. `zoom-workspaces` (workspace reservations) is a different server from `zoom-workspace` (the general Zoom MCP endpoint at `/mcp/zoom`).
+
+`io.github.zoom/zoom-meetings` was bumped to `1.0.1` because the Meetings server now also exposes meeting create, update, delete, and in-meeting control tools.
+
+Not added: the Zoom Contact Center User Administration MCP server. Its docs page lists an account-specific URL (`https://mcp.zoom.us/mcp/i_<id>/streamable`) rather than a shared endpoint, so it does not fit a public registry entry.
+
+Note on `zoom-docs`: its docs page (`/docs/mcp/zoom-docs-mcp-server/`) now returns 404 and Docs functionality is documented under Zoom Canvas. The endpoint `https://mcp.zoom.us/mcp/docs/streamable` still responds (`401` without auth), so the entry is left unchanged.
+
+## Checking For New Zoom MCP Servers
+
+The docs site is no longer a Next.js pages-router site, so `_next/data` JSON is gone. Scrape the HTML instead:
+
+```bash
+# list server pages
+curl -fsSL https://developers.zoom.us/docs/mcp/servers/ | rg -o '/docs/mcp/[a-z0-9-]+/' | sort -u
+
+# endpoint and description for one page
+curl -fsSL https://developers.zoom.us/docs/mcp/zoom-admin-mcp-server/ \
+  | rg -o 'https://mcp\.zoom\.us/mcp/[a-z_]+/streamable' | sort -u
+```
+
+Tool names are embedded in the page payload under `mcpTools` (escaped JSON), so fetch the page, unescape `\"` to `"`, and read the `"name"` values after `"mcpTools":[`. Compare against each `server.json` description and bump the version for any change.
+
+Registry versions are immutable. Bump `version` for any metadata change, never for unchanged entries. Registry metadata does not need a Zoom access token. The live MCP endpoints return `401` without auth.
+
+## Publishing All New Or Changed Entries
+
+```bash
+mcp-publisher logout && mcp-publisher login github   # only if auth expired
+
+cd ~/temp/mcp-registry-publish
+for d in zoom-meetings zoom-admin zoom-canvas zoom-phone zoom-productivity zoom-rooms zoom-workflows zoom-workspaces; do
+  (cd "$d" && mcp-publisher publish)
+done
+```
+
+Verify each with `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2F<name>/versions/latest`.
+
 ## Final `server.json` Shape
 
 For each server, the final metadata included:

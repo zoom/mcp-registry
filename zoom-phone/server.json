@@ -1,0 +1,57 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.zoom/zoom-phone",
+  "title": "Zoom Phone MCP Server",
+  "description": "Zoom Phone server for administering sites, users, call queues, numbers, and calling plans.",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/zoom/mcp-registry/main/zoom.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "websiteUrl": "https://developers.zoom.us/docs/mcp/zoom-phone-mcp-server/",
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "documentation": "https://developers.zoom.us/docs/mcp/servers/connect-to-zoom-mcp-servers/",
+      "publisher": "Zoom",
+      "keywords": [
+        "zoom",
+        "phone",
+        "telephony",
+        "call-queues",
+        "auto-receptionists",
+        "calling-plans",
+        "phone-numbers",
+        "mcp"
+      ],
+      "examples": [
+        {
+          "name": "Manage call queues",
+          "description": "Create call queues, add members, assign numbers, and review call handling settings."
+        },
+        {
+          "name": "Assign numbers and plans",
+          "description": "Assign phone numbers and calling plans to users and common areas."
+        },
+        {
+          "name": "Review phone setup",
+          "description": "List sites, auto receptionists, emergency addresses, and billing accounts."
+        }
+      ]
+    }
+  },
+  "repository": {
+    "url": "https://github.com/zoom/mcp-registry",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/phone/streamable"
+    }
+  ]
+}

@@ -53,11 +53,60 @@ Zoom Meetings provides a focused MCP surface for meeting search, recordings, tra
 
 Zoom Tasks provides a focused MCP surface for creating, updating, assigning, and synchronizing tasks. It is intended for workflows such as managing task details, reviewing comments and steps, and coordinating work across collaborators.
 
+### `io.github.zoom/zoom-admin`
+
+- Registry metadata: [zoom-admin/server.json](./zoom-admin/server.json)
+- Remote URL: `https://mcp.zoom.us/mcp/admin/streamable`
+
+Zoom Admin provides MCP tools for viewing and updating account-wide settings (meeting, recording, security, chat, telephony), listing users and groups, and retrieving user settings and permissions.
+
+### `io.github.zoom/zoom-canvas`
+
+- Registry metadata: [zoom-canvas/server.json](./zoom-canvas/server.json)
+- Remote URL: `https://mcp.zoom.us/mcp/canvas/streamable`
+
+Zoom Canvas provides MCP tools for creating, editing, and sharing Zoom documents with Markdown support, including block-level edits, comments, data tables, and collaborator and access management.
+
+### `io.github.zoom/zoom-phone`
+
+- Registry metadata: [zoom-phone/server.json](./zoom-phone/server.json)
+- Remote URL: `https://mcp.zoom.us/mcp/phone/streamable`
+
+Zoom Phone provides administrative MCP tools for sites, users, calling plans, phone numbers, call queues, auto receptionists, shared line groups, common areas, monitoring groups, emergency addresses, and push-to-talk.
+
+### `io.github.zoom/zoom-productivity`
+
+- Registry metadata: [zoom-productivity/server.json](./zoom-productivity/server.json)
+- Remote URL: `https://mcp.zoom.us/mcp/productivity/streamable`
+
+Zoom Productivity provides MCP tools for creating and managing Zoom Sheets content, including spreadsheets, sheets, and cell reads and edits.
+
+### `io.github.zoom/zoom-rooms`
+
+- Registry metadata: [zoom-rooms/server.json](./zoom-rooms/server.json)
+- Remote URL: `https://mcp.zoom.us/mcp/rooms/streamable`
+
+Zoom Rooms provides MCP tools for listing and managing rooms, devices, locations, and tags, and for reading account, room, and location profiles and settings.
+
+### `io.github.zoom/zoom-workflows`
+
+- Registry metadata: [zoom-workflows/server.json](./zoom-workflows/server.json)
+- Remote URL: `https://mcp.zoom.us/mcp/workflow/streamable`
+
+Zoom Workflows provides lifecycle management for user-owned Workflow Builder automations: inspect node contracts, deploy or undeploy workflows, run them asynchronously, and monitor or resume executions.
+
+### `io.github.zoom/zoom-workspaces`
+
+- Registry metadata: [zoom-workspaces/server.json](./zoom-workspaces/server.json)
+- Remote URL: `https://mcp.zoom.us/mcp/workspace/streamable`
+
+Zoom Workspaces provides MCP tools for workspace reservation and management, including listing workspaces, locations, and assets, and creating, updating, or deleting reservations. It is separate from `io.github.zoom/zoom-workspace`, which is the general Zoom MCP server.
+
 ## Registry Notes
 
 - Namespace: `io.github.zoom/*`
 - Transport: `streamable-http`
-- Current metadata versions in this repository: `1.0.2` for Workspace, Docs, and Whiteboard; `1.0.1` for Revenue Accelerator and Team Chat; `1.0.0` for Meetings and Tasks
+- Current metadata versions in this repository: `1.0.2` for Workspace, Docs, and Whiteboard; `1.0.1` for Revenue Accelerator, Team Chat, and Meetings; `1.0.0` for Tasks, Admin, Canvas, Phone, Productivity, Rooms, Workflows, and Workspaces
 
 ## Registry API Records
 
@@ -69,6 +118,13 @@ Zoom Tasks provides a focused MCP surface for creating, updating, assigning, and
 - Team Chat latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-team-chat/versions/latest`
 - Meetings latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-meetings/versions/latest`
 - Tasks latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-tasks/versions/latest`
+- Admin latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-admin/versions/latest`
+- Canvas latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-canvas/versions/latest`
+- Phone latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-phone/versions/latest`
+- Productivity latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-productivity/versions/latest`
+- Rooms latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-rooms/versions/latest`
+- Workflows latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-workflows/versions/latest`
+- Workspaces latest version: `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2Fzoom-workspaces/versions/latest`
 
 ## Publishing Workflow
 
@@ -118,13 +174,13 @@ cd ~/temp/mcp-registry-publish/zoom-team-chat
 mcp-publisher publish
 ```
 
-To publish the Meetings and Tasks entries:
+To publish every entry that is new or changed (see `RUNBOOK.md` for the full list and a loop):
 
 ```bash
-cd ~/temp/mcp-registry-publish/zoom-meetings
+cd ~/temp/mcp-registry-publish/zoom-meetings   # 1.0.1 update
 mcp-publisher publish
 
-cd ~/temp/mcp-registry-publish/zoom-tasks
+cd ~/temp/mcp-registry-publish/zoom-admin      # new, 1.0.0
 mcp-publisher publish
 ```
 

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.zoom/zoom-workspaces",
+  "title": "Zoom Workspaces MCP Server",
+  "description": "Zoom Workspaces server for workspace reservations, locations, assets, and calendar events.",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/zoom/mcp-registry/main/zoom.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "websiteUrl": "https://developers.zoom.us/docs/mcp/zoom-workspaces-mcp-server/",
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "documentation": "https://developers.zoom.us/docs/mcp/servers/connect-to-zoom-mcp-servers/",
+      "publisher": "Zoom",
+      "keywords": [
+        "zoom",
+        "workspaces",
+        "reservations",
+        "desks",
+        "locations",
+        "assets",
+        "calendar",
+        "mcp"
+      ],
+      "examples": [
+        {
+          "name": "Find workspaces",
+          "description": "List workspaces, accessible locations, and assets available for reservation."
+        },
+        {
+          "name": "Manage reservations",
+          "description": "Create, update, or delete workspace reservations and list existing ones."
+        },
+        {
+          "name": "Check calendar context",
+          "description": "Retrieve calendar events, contacts, and meetings related to workspace plans."
+        }
+      ]
+    }
+  },
+  "repository": {
+    "url": "https://github.com/zoom/mcp-registry",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/workspace/streamable"
+    }
+  ]
+}

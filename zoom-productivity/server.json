@@ -1,0 +1,57 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.zoom/zoom-productivity",
+  "title": "Zoom Productivity MCP Server",
+  "description": "Zoom Productivity server for creating and managing Zoom Sheets, Paper, and Slides content.",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/zoom/mcp-registry/main/zoom.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "websiteUrl": "https://developers.zoom.us/docs/mcp/zoom-productivity-mcp-server/",
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "documentation": "https://developers.zoom.us/docs/mcp/servers/connect-to-zoom-mcp-servers/",
+      "publisher": "Zoom",
+      "keywords": [
+        "zoom",
+        "productivity",
+        "sheets",
+        "spreadsheets",
+        "paper",
+        "slides",
+        "documents",
+        "mcp"
+      ],
+      "examples": [
+        {
+          "name": "Create a spreadsheet",
+          "description": "Create a Zoom Sheets spreadsheet and add or rename sheets."
+        },
+        {
+          "name": "Read cells",
+          "description": "Read cell values and list sheet blocks from an existing spreadsheet."
+        },
+        {
+          "name": "Edit cells",
+          "description": "Edit cell content in a spreadsheet through structured tool calls."
+        }
+      ]
+    }
+  },
+  "repository": {
+    "url": "https://github.com/zoom/mcp-registry",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/productivity/streamable"
+    }
+  ]
+}

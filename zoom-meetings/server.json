@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.zoom/zoom-meetings",
   "title": "Zoom Meetings MCP Server",
-  "description": "Zoom Meetings server for meeting search, recordings, transcripts, summaries, and meeting assets.",
+  "description": "Zoom Meetings server for creating, searching, and managing meetings, recordings, and assets.",
   "icons": [
     {
       "src": "https://raw.githubusercontent.com/zoom/mcp-registry/main/zoom.png",
@@ -20,25 +20,25 @@
       "keywords": [
         "zoom",
         "meetings",
+        "scheduling",
         "recordings",
         "transcripts",
         "summaries",
-        "participants",
-        "assets",
+        "in-meeting-control",
         "mcp"
       ],
       "examples": [
+        {
+          "name": "Schedule a meeting",
+          "description": "Create, update, or delete one-time and recurring meetings."
+        },
         {
           "name": "Search meetings",
           "description": "Find meetings by keyword and date range with meeting details and context."
         },
         {
           "name": "Review meeting assets",
-          "description": "Retrieve meeting summaries, transcripts, recordings, and related assets."
-        },
-        {
-          "name": "Inspect recordings",
-          "description": "List cloud recordings and retrieve recording resources for follow-up workflows."
+          "description": "Retrieve summaries, transcripts, recordings, and related assets for follow-up."
         }
       ]
     }
@@ -47,7 +47,7 @@
     "url": "https://github.com/zoom/mcp-registry",
     "source": "github"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "remotes": [
     {
       "type": "streamable-http",

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.zoom/zoom-canvas",
+  "title": "Zoom Canvas MCP Server",
+  "description": "Zoom Canvas server for creating, editing, and sharing Zoom documents, comments, and data tables.",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/zoom/mcp-registry/main/zoom.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "websiteUrl": "https://developers.zoom.us/docs/mcp/zoom-canvas-mcp-server/",
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "documentation": "https://developers.zoom.us/docs/mcp/servers/connect-to-zoom-mcp-servers/",
+      "publisher": "Zoom",
+      "keywords": [
+        "zoom",
+        "canvas",
+        "docs",
+        "documents",
+        "markdown",
+        "collaboration",
+        "data-tables",
+        "mcp"
+      ],
+      "examples": [
+        {
+          "name": "Create a document",
+          "description": "Create a Zoom document from Markdown content and read its content back."
+        },
+        {
+          "name": "Edit document blocks",
+          "description": "Insert, update, replace, or delete blocks in an existing document."
+        },
+        {
+          "name": "Manage sharing",
+          "description": "Add collaborators, change roles, and update general access settings on a file."
+        }
+      ]
+    }
+  },
+  "repository": {
+    "url": "https://github.com/zoom/mcp-registry",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/canvas/streamable"
+    }
+  ]
+}

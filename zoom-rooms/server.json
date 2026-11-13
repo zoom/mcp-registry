@@ -1,0 +1,57 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.zoom/zoom-rooms",
+  "title": "Zoom Rooms MCP Server",
+  "description": "Zoom Rooms server for managing rooms, devices, locations, tags, and room settings.",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/zoom/mcp-registry/main/zoom.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "websiteUrl": "https://developers.zoom.us/docs/mcp/zoom-rooms-mcp-server/",
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "documentation": "https://developers.zoom.us/docs/mcp/servers/connect-to-zoom-mcp-servers/",
+      "publisher": "Zoom",
+      "keywords": [
+        "zoom",
+        "rooms",
+        "devices",
+        "locations",
+        "tags",
+        "room-settings",
+        "hardware",
+        "mcp"
+      ],
+      "examples": [
+        {
+          "name": "List rooms and devices",
+          "description": "List Zoom Rooms and devices and retrieve room and device details."
+        },
+        {
+          "name": "Inspect locations",
+          "description": "Review location structure, profiles, and settings across the account."
+        },
+        {
+          "name": "Organize with tags",
+          "description": "Create tags and assign or unassign them on rooms."
+        }
+      ]
+    }
+  },
+  "repository": {
+    "url": "https://github.com/zoom/mcp-registry",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/rooms/streamable"
+    }
+  ]
+}

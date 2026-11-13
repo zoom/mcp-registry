@@ -1,0 +1,57 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.zoom/zoom-admin",
+  "title": "Zoom Admin MCP Server",
+  "description": "Zoom Admin server for account settings, users, groups, and permissions.",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/zoom/mcp-registry/main/zoom.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    }
+  ],
+  "websiteUrl": "https://developers.zoom.us/docs/mcp/zoom-admin-mcp-server/",
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "documentation": "https://developers.zoom.us/docs/mcp/servers/connect-to-zoom-mcp-servers/",
+      "publisher": "Zoom",
+      "keywords": [
+        "zoom",
+        "admin",
+        "account-settings",
+        "users",
+        "groups",
+        "permissions",
+        "security",
+        "mcp"
+      ],
+      "examples": [
+        {
+          "name": "Review account settings",
+          "description": "Read account-wide meeting, recording, security, chat, and telephony settings."
+        },
+        {
+          "name": "List users and groups",
+          "description": "List users and groups and retrieve group members, user settings, and permissions."
+        },
+        {
+          "name": "Update account settings",
+          "description": "Update account settings and check account lock settings before making changes."
+        }
+      ]
+    }
+  },
+  "repository": {
+    "url": "https://github.com/zoom/mcp-registry",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.zoom.us/mcp/admin/streamable"
+    }
+  ]
+}
