@@ -208,6 +208,15 @@ done
 
 Verify each with `https://registry.modelcontextprotocol.io/v0.1/servers/io.github.zoom%2F<name>/versions/latest`.
 
+## Publishing Via GitHub Actions
+
+The registry now rejects `io.github.zoom/*` publishes from `mcp-publisher login github` unless the account is an owner of the `zoom` org (`403 ... You have permission to publish: io.github.<user>/*`). Org publishing still works through:
+
+- GitHub Actions OIDC (`mcp-publisher login github-oidc`), used by `.github/workflows/publish.yml`, or
+- `mcp-publisher login github --token <classic PAT with read:org>` from an org owner.
+
+To publish: bump the `version` in the changed `server.json`, push to `main`, and the workflow publishes any entry not yet live. Run it manually with `gh workflow run publish.yml -f dry_run=false`. Use `dry_run=true` to list what would be published.
+
 ## Final `server.json` Shape
 
 For each server, the final metadata included:

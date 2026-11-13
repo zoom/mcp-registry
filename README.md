@@ -138,7 +138,17 @@ For the Zoom-specific step-by-step publishing history and lessons learned, see [
 - Authenticate with GitHub using an account that has access to the target GitHub organization
 - Ensure the GitHub organization membership associated with the namespace is public
 
-### Publish a New Version
+### Publish With GitHub Actions (Recommended)
+
+Publishing under `io.github.zoom/*` requires proof of GitHub org ownership, which the interactive `mcp-publisher login github` flow cannot provide. The workflow at [.github/workflows/publish.yml](./.github/workflows/publish.yml) publishes with GitHub OIDC instead, so no personal token is needed.
+
+- It runs on pushes to `main` that change any `zoom-*/server.json`, and manually from the Actions tab (**Run workflow**, with an optional `dry_run`).
+- It publishes only entries whose `name@version` is not already in the registry, so bump `version` in any `server.json` you change.
+- It fails if a `description` is longer than 100 characters.
+
+From the CLI: `gh workflow run publish.yml -f dry_run=true` (or `false` to publish), then `gh run watch`.
+
+### Publish A New Version Manually
 
 1. Update the relevant `server.json`.
 2. Increment the `version` field before publishing an update.
