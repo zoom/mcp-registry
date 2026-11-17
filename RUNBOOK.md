@@ -217,6 +217,16 @@ The registry now rejects `io.github.zoom/*` publishes from `mcp-publisher login 
 
 To publish: bump the `version` in the changed `server.json`, push to `main`, and the workflow publishes any entry not yet live. Run it manually with `gh workflow run publish.yml -f dry_run=false`. Use `dry_run=true` to list what would be published.
 
+## Tool Changes Refresh
+
+Zoom's tool lists changed after the entries above were first published, so these were refreshed and bumped:
+
+- `io.github.zoom/zoom-workspace` `1.0.3`: the general Zoom server now also exposes Workflow Builder tools and `capabilities_*` tools.
+- `io.github.zoom/zoom-phone` `1.0.1`: added the `capabilities_discover`, `capabilities_describe`, `capabilities_invoke_read`, and `capabilities_invoke_write` tools.
+- `io.github.zoom/zoom-rooms` `1.0.1`: added calendar resource, room delete, and location change, delete, re-assign, and structure-update tools.
+
+Published by pushing to `main`, which triggers `.github/workflows/publish.yml`.
+
 ## Final `server.json` Shape
 
 For each server, the final metadata included:

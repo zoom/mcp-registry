@@ -106,7 +106,7 @@ Zoom Workspaces provides MCP tools for workspace reservation and management, inc
 
 - Namespace: `io.github.zoom/*`
 - Transport: `streamable-http`
-- Current metadata versions in this repository: `1.0.2` for Workspace, Docs, and Whiteboard; `1.0.1` for Revenue Accelerator, Team Chat, and Meetings; `1.0.0` for Tasks, Admin, Canvas, Phone, Productivity, Rooms, Workflows, and Workspaces
+- Current metadata versions in this repository: `1.0.3` for Workspace; `1.0.2` for Docs and Whiteboard; `1.0.1` for Revenue Accelerator, Team Chat, Meetings, Phone, and Rooms; `1.0.0` for Tasks, Admin, Canvas, Productivity, Workflows, and Workspaces
 
 ## Registry API Records
 

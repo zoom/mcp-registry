@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.zoom/zoom-phone",
   "title": "Zoom Phone MCP Server",
-  "description": "Zoom Phone server for administering sites, users, call queues, numbers, and calling plans.",
+  "description": "Zoom Phone server for administering sites, users, queues, numbers, plans, and capabilities.",
   "icons": [
     {
       "src": "https://raw.githubusercontent.com/zoom/mcp-registry/main/zoom.png",
@@ -37,8 +37,12 @@
           "description": "Assign phone numbers and calling plans to users and common areas."
         },
         {
+          "name": "Discover capabilities",
+          "description": "Discover, describe, and invoke Zoom Phone read and write capabilities."
+        },
+        {
           "name": "Review phone setup",
-          "description": "List sites, auto receptionists, emergency addresses, and billing accounts."
+          "description": "List sites, auto receptionists, shared line groups, and emergency addresses."
         }
       ]
     }
@@ -47,7 +51,7 @@
     "url": "https://github.com/zoom/mcp-registry",
     "source": "github"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "remotes": [
     {
       "type": "streamable-http",
